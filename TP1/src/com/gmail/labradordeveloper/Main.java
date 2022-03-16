@@ -11,18 +11,21 @@ public class Main {
         exerciseTwo();
         exerciseThree();*/
         //exerciseFour();
-        Scanner scanner = new Scanner((System.in));
+        Scanner sc = new Scanner((System.in));
         int N ;
         do {
             System.out.println("Enter a number different than 0");
-            N = scanner.nextInt();
+            N = sc.nextInt();
         } while (N == 0);
-        scanner.nextLine();
         exercise7(N);
-        String name;
-        System.out.println("Introduce your name\n");
-        name = scanner.nextLine();
+        System.out.println("Introduce your name");
+        sc.nextLine();//Me muevo en la consola
+        //sc.next() me guarda hasta encontrar un espacio
+        String name = sc.nextLine();
         showName(name);
+        System.out.println("Enter a number");
+        N = sc.nextInt();
+        tripleDouble(N);
 
     }
 
@@ -110,6 +113,11 @@ public class Main {
     //Exercise 8
     public static void showName(String name){
         System.out.println("Hi! " + name);
+    }
+    //Exercise 9
+    public static void tripleDouble (int N){
+        System.out.println( "The double of " + N + " is " + N*2);
+        System.out.println( "The triple of " + N + " is " + N*3);
     }
 
 }
