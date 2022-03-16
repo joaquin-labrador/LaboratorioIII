@@ -5,7 +5,7 @@
 
 package com.gmail.labradordeveloper;
 import java.util.Scanner;
-public class Main {
+public class Main { 
     public static void main(String[] args) {
         /*exerciseOne();
         exerciseTwo();
