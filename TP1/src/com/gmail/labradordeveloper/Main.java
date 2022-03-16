@@ -14,12 +14,16 @@ public class Main {
         Scanner scanner = new Scanner((System.in));
         int N ;
         do {
-            System.out.println("Ingrese un numero distinto a CERO");
+            System.out.println("Enter a number different than 0");
             N = scanner.nextInt();
         } while (N == 0);
-        /*System.out.println("El numero ingresado es " + (evenOrOdd(N) ? "Par" : "Impar" ));*/
-        /*System.out.println("El numero ingrasado es " + (negativeOrPositive(N) ? "Mayor a 0" : "Menor o Igual a 0") )*/
+        scanner.nextLine();
         exercise7(N);
+        String name;
+        System.out.println("Introduce your name\n");
+        name = scanner.nextLine();
+        showName(name);
+
     }
 
     public static void exerciseOne() {
@@ -103,6 +107,11 @@ public class Main {
     public static boolean lessThan(int N, int higher){
         return N >= higher;
     }
+    //Exercise 8
+    public static void showName(String name){
+        System.out.println("Hi! " + name);
+    }
+
 }
 
 
