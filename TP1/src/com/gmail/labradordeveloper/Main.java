@@ -9,53 +9,9 @@ import java.text.DecimalFormat;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner((System.in));
-        int N ;
-        double R;
-        double c1;
-        double c2;
-        /*exerciseOne();
-        exerciseTwo();
-        exerciseThree();*/
-        //exerciseFour();
-//       do {
-//            System.out.println("Enter a number different than 0");
-//            N = sc.nextInt();
-//        } while (N == 0);
-//        exercise7(N);
-//        System.out.println("Introduce your name");
-//        sc.nextLine();//Me muevo en la consola
-//        //sc.next() me guarda hasta encontrar un espacio
-//        String name = sc.nextLine();
-//        showName(name);
-        //tripleDouble(N);
-        //System.out.println((farToCelsius(N)));
-//        System.out.println("Enter the radius");
-//        radioToArea(R);
-//        System.out.println("Enter a velocity in Km/H");
-//        R = sc.nextDouble();
-//        System.out.println();
-//        System.out.println((kmHToKmS(R) != 0  ?   Math.round(kmHToKmS(R) * 100.0)/100.0  + " Km/s" : " Error"));
-//        System.out.println("Enter a cathetus 1");
-//        c1 = sc.nextDouble();
-//        System.out.println("Enter a cathetus 2");
-//        c2 = sc.nextDouble();
-//        System.out.println(hypotenuse(c1,c2) != 0 ? "Hypotenuse " + Math.round(hypotenuse(c1,c2) * 100.0)/100.0 + " cm" : "Error");
-
-        System.out.println("Enter the radius");
-        R = sc.nextDouble();
-        System.out.println(volumeSphere(R) != 0 ? "Volume : " + Math.round(volumeSphere(R) * 100.0) / 100.0 : "Error");
-        double S1 , S2 , S3;
-        System.out.println("Enter the sides of a triangle");
-        S1 = sc.nextDouble();
-        S2 = sc.nextDouble();
-        S3 = sc.nextDouble();
-        System.out.println(areaTriangle(S1,S2,S3) != 0? "Area : " + (areaTriangle(S1,S2,S3)): "Error");
-
-
-
+        
     }
-
+    //Exercise 1
     public static void exerciseOne() {
         int n = 5;
         double a = 15.6;
@@ -65,21 +21,21 @@ public class Main {
         System.out.println("El valor entero de" + c + "es : " + (int) c);
 
     }
-
+    //Exercise 2
     public static void exerciseTwo() {
         int x = 2, y = 3;
         double n = 5.2, m = 9.2;
         System.out.println("La multiplicacion de x * m : " + (x * m));
         System.out.println("La divicion de n / y  : " + (n / y));
     }
-
+    //Exercise 3
     public static void exerciseThree() {
         int N = 10;
         System.out.println("Aumento a : " + (N + 77));
         System.out.println("Decremento 3 : " + (N - 3));
         System.out.println("Duplicar valor : " + (N * 2));
     }
-
+    //Exercise 4
     public static void exerciseFour() {
         int A = 1, B = 2, C = 3, D = 4;
         int[] array = {A, B, C, D};
@@ -107,22 +63,16 @@ public class Main {
         }
 
     }
-
+    //Exercise 5
     public static boolean evenOrOdd(int N) {
         return N % 2 == 0;
 
     }
-
-    /* 6. Programa Java que declare una variable B de tipo entero y asignarle un valor. A
-              continuación mostrar un mensaje indicando si el valor de B es positivo o negativo.*/
+    //Exercise 6
     public static boolean negativeOrPositive(int N) {
         return N > 0;
     }
-
-    /* (7) Programa Java que declare una variable C de tipo entero y asignarle un valor. A
-        continuación mostrar un mensaje indicando si el valor de C es positivo o negativo,
-        si es par o impar, si es múltiplo de 5, si es múltiplo de 10 y si es mayor o menor que
-        100.*/
+    //Exercise 7
     public static void exercise7(int N) {
         System.out.println(N + " is " + (evenOrOdd(N) ? "Even" : "Odd"));
         System.out.println(N + " is " + (negativeOrPositive(N) ? "Positive" : "Negative"));
@@ -181,6 +131,61 @@ public class Main {
         }
         return 0;
     }
+    //Exercise 16
+    public static String number3ToStr (){
+        Scanner sc = new Scanner(System.in);
+        int N = 0;
+        do{
+            System.out.println("Enter a three digit number");
+            N = sc.nextInt();
+
+        }while(N < 100 || N > 1000);
+        return Integer.toString(N);
+    }
+    public static void showDigitNumber(String number){
+        for(int i = 0; i < number.length(); i++){
+            System.out.println("Digit : " + (i + 1) + " is " + number.charAt(i));
+        }
+    }
+    //Exercise 17
+    public static String number5ToStr(){
+        Scanner sc = new Scanner(System.in);
+        int N = 0;
+        do{
+            System.out.println("Enter a five digit number");
+            N = sc.nextInt();
+
+        }while(N < 10000 || N > 100000);
+        return Integer.toString(N);
+
+    }
+    public static void showDigitNumberOdd(String number){
+        for(int i = 0; i < number.length(); i++){
+            if((i + 1) % 2 != 0)
+                System.out.println("Digit : " + (i + 1) + " is " + number.charAt(i));
+        }
+    }
+    //Exercise 18
+    public static Boolean timeVerification (int H , int M , int S){
+        return (H  < 24 && M < 60 && S < 60 );
+
+    }
+
+    public static void enterAHour() {
+        Scanner sc = new Scanner(System.in);
+        int H,M,S;
+        System.out.println("Enter a hour : ");
+        H = sc.nextInt();
+        System.out.println("Enter a minutes : ");
+        M = sc.nextInt();;
+        System.out.println("Enter a seconds : ");
+        S = sc.nextInt();
+
+        System.out.println(timeVerification(H,M,S) ? "Valid time" : "Invalid time");
+
+
+    }
+
 }
 
 
