@@ -1,8 +1,7 @@
 package Exercise2;
 
 public class Employee {
-    //dni, nombre,
-    //apellido y salario
+
     private int ID;
     private String name;
     private String lastName;
