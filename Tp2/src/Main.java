@@ -3,6 +3,7 @@ import Exercise1.Rectangle;
 import Exercise2.Employee;
 import Exercise3.Item;
 import Exercise4.BankAccount;
+import Exercise5.Hour;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,6 +24,7 @@ public class Main {
         System.out.println("\n==== Exercise 3 ==== \n");
         Item goudaChesse = new Item(12654, "Foodstuffs", 180, 3.25);
         System.out.println(goudaChesse);
+
         System.out.println("\n==== Exercise 4 ==== \n");
         BankAccount bA1 = new BankAccount(41458511, "Joaquin Labrador", 15000);
         bA1.creditDeposit(2500);
@@ -31,6 +33,14 @@ public class Main {
         System.out.println(bA1);
         bA1.debitPay(30000);
         System.out.println(bA1);
+
+        System.out.println("\n==== Exercise 5 ==== \n");
+        Hour W = new Hour(13, 4, 22);
+        for (int i = 0; i < 10000; i++) {
+            W.downSecond();
+            System.out.println(W);
+        }
+
 
     }
 
