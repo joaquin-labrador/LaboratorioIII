@@ -63,6 +63,7 @@ public class Invoice {
     public String toString() {
         return "Invoice{" +
                 "invoiceID =" + invoiceID +
+                " Dto = "  + client.getDcto() +
                 ", totalPrice =" + getMontoTotal() +
                 ", date =" + date + "\n" +
                 "items =" + items.toString() +

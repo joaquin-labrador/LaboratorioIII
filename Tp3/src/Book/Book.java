@@ -1,25 +1,22 @@
 package Book;
 
-import Book.autor.Autor;
+import Book.author.Author;
 
-import java.util.Arrays;
-
-import org.w3c.dom.ls.LSOutput;
+import java.util.ArrayList;
 
 public class Book {
     private String title;
     private double price;
     private int stock;
-    private Autor[] autores;
+    private ArrayList<Author> authors = new ArrayList<Author>();
 
     public Book() {
     }
 
-    public Book(String title, double price, int stock, Autor[] autores) {
+    public Book(String title, double price, int stock) {
         this.title = title;
         this.price = price;
         this.stock = stock;
-        this.autores = autores;
     }
 
     public String getTitle() {
@@ -42,13 +39,15 @@ public class Book {
         this.stock = stock;
     }
 
-    public Autor[] getAutores() {
-        return autores;
+
+    public ArrayList<Author> getAutors() {
+        return authors;
     }
 
-    public void setAutores(Autor[] autores) {
-        this.autores = autores;
+    public void setAutores(Author author) {
+        authors.add(author);
     }
+
 
     public void sumBooks(int B) {
         this.stock += B;
@@ -64,7 +63,7 @@ public class Book {
                 "title='" + title + '\'' +
                 ", price=" + price +
                 ", stock=" + stock +
-                ", autores=" + Arrays.toString(autores) +
+                ", autores=" + authors.toString() +
                 '}';
     }
 
@@ -75,10 +74,10 @@ public class Book {
          * Un StringBuilder está indexado. Cada uno de sus caracteres tiene un índice: 0 para el primero,1 para el segundo, etc.
          * */
         StringBuilder names = new StringBuilder();
-        for (Autor autor : autores) {
-            names.append(autor.getName());
+        for (Author author : authors) {
+            names.append(author.getName());
             names.append(" ");
-            names.append(autor.getLastName());
+            names.append(author.getLastName());
             names.append(", ");
         }
         return "THE BOOK " + title + " OF " + names + "IT COSTS " + price + "$";

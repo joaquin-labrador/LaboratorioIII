@@ -1,20 +1,18 @@
-package Book.autor;
+package Book.author;
 
 
-public class Autor {
+public class Author {
     protected String name;
     protected String lastName;
-    protected String eMail;
     protected char Sex;
 
-    public Autor() {
+    public Author() {
 
     }
 
-    public Autor(String name, String lastName, String eMail, char sex) {
+    public Author(String name, String lastName, char sex) {
         this.name = name;
         this.lastName = lastName;
-        this.eMail = eMail;
         Sex = sex;
     }
 
@@ -26,13 +24,6 @@ public class Autor {
         return lastName;
     }
 
-    public String geteMail() {
-        return eMail;
-    }
-
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
-    }
 
     public char getSex() {
         return Sex;
@@ -41,11 +32,9 @@ public class Autor {
 
     @Override
     public String toString() {
-        int i = 0;
         return " Autor { " +
-                "name= '" + name + '\'' +
+                " name= '" + name + '\'' +
                 ", lastName= '" + lastName + '\'' +
-                ", eMail= '" + eMail + '\'' +
                 ", Sex= " + Sex + "\n" +
                 '}';
     }

@@ -1,41 +1,45 @@
 import Book.Book;
-import Book.autor.Autor;
+import Book.author.Author;
 import Cliente.Client;
 import Cliente.invoice.Item.Item;
 import Cliente.invoice.Invoice;
 import java.util.Scanner;
 public class Main {
+
+
     public static void main(String[] args) {
-        //exercise1();
-        exercise2();
+
+        exercise1();
+
+        //exercise2();
 
 
 
     }
     public static void exercise1(){
-        Autor [] singleAuthor = new Autor[1];//Autor individual
-        Autor author = new Autor("Joshua","Bloch","joshua@email.com",'M');
-        singleAuthor[0] = author;
-        Book book = new Book("Effective Java", 450, 150, singleAuthor);
-        book.sumBooks(50);
-        book.sumPrice(50);
-        System.out.println(book);
+        Scanner sc = new Scanner(System.in);
+        Book book = new Book("Effective Java", 450, 150);
+        char s = 's';
+        do{
+            System.out.println("Enter the name of the author");
+            String name = sc.nextLine();
+            System.out.println("Enter the lastname of the author");
+            String lastName = sc.nextLine();
+            char sex;
+            do {
+                System.out.println("Enter the sex of the author(f | m | x)");
+                sex = sc.nextLine().charAt(0);
+            }while(sex != 'f' && sex != 'm' && sex != 'x');
+            Author author = new Author(name,lastName,sex);//Creo el autor
+            book.setAutores(author);//Asigno el autor al libro
+            System.out.println("More authors?");
+            s = sc.nextLine().charAt(0);
+        }while(s == 's');
+
+        //System.out.println(book);
+        System.out.println(book.forSell());
 
 
-        //1H
-
-        //Creo un arrays de autores e instancio un array de una clase (Autores)
-        Autor[] autores = new Autor[2];
-        autores[0] = author;
-        Autor autor2 = new Autor("Joaquin", "Labrador", "Holacomova@gmail.com", 'M');
-        autores[1] = autor2;
-        Book bookH = new Book("Effective Java Two ", 700, 170, autores);//Creo un nuevo libro con dos auures
-        book.setAutores(autores);//Le agrego el segundo autor al primer libro
-        System.out.println("First book + New autor \n");
-        System.out.println(book);
-        System.out.println("Second book\n");
-        System.out.println(bookH);
-        System.out.println(bookH.forSell());
 
     }
 
