@@ -47,7 +47,7 @@ public class Main {
         char s = 's';
         Scanner sc = new Scanner(System.in);
         Client client1 = new Client("Joaquin","JoaquinLabrador@gmial.com",50);
-        //Creo los productos que se van a comrar
+        //Creo los productos que se van a cobrar
         Invoice invoice = new Invoice(client1);
 
         do{
