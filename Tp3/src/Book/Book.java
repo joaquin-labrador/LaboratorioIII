@@ -1,0 +1,88 @@
+package Book;
+
+import Book.autor.Autor;
+
+import java.util.Arrays;
+
+import org.w3c.dom.ls.LSOutput;
+
+public class Book {
+    private String title;
+    private double price;
+    private int stock;
+    private Autor[] autores;
+
+    public Book() {
+    }
+
+    public Book(String title, double price, int stock, Autor[] autores) {
+        this.title = title;
+        this.price = price;
+        this.stock = stock;
+        this.autores = autores;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public Autor[] getAutores() {
+        return autores;
+    }
+
+    public void setAutores(Autor[] autores) {
+        this.autores = autores;
+    }
+
+    public void sumBooks(int B) {
+        this.stock += B;
+    }
+
+    public void sumPrice(int P) {
+        this.price += P;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", price=" + price +
+                ", stock=" + stock +
+                ", autores=" + Arrays.toString(autores) +
+                '}';
+    }
+
+    public String forSell() {
+        /*CLASE Los objetos de éste tipo son mutables. Esto es una diferencia con los String.
+         * Debe crearse con alguno de sus costructores asociados.STRINGBUILDER
+         * Su tamaño y contenido pueden modificarse.
+         * Un StringBuilder está indexado. Cada uno de sus caracteres tiene un índice: 0 para el primero,1 para el segundo, etc.
+         * */
+        StringBuilder names = new StringBuilder();
+        for (Autor autor : autores) {
+            names.append(autor.getName());
+            names.append(" ");
+            names.append(autor.getLastName());
+            names.append(", ");
+        }
+        return "THE BOOK " + title + " OF " + names + "IT COSTS " + price + "$";
+    }
+
+
+}
