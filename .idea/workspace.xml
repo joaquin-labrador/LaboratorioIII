@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4698e02-dbe8-4375-953a-f63a98853138" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP1/src/com/gmail/labradordeveloper/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/TP1/src/com/gmail/labradordeveloper/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP2/src/Animals/mammal/Dog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP2/src/Animals/mammal/Mammal.java" beforeDir="false" />
+    <list default="true" id="37f5373e-be4b-41e6-b482-237e511a8558" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tp2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tp2/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +15,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="26ZiNMbjbltGzu9qsk3u0Tgm868" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26fx1ToFzptqcLhB30srRFTPp4e" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,16 +26,47 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/TP2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tp3" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Unnamed" type="AntRunConfiguration" nameIsGenerated="true">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Tp2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="LaboratorioIII" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="LaboratorioIII" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Ant Target.Unnamed" />
+      <item itemvalue="Application.Main" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b4698e02-dbe8-4375-953a-f63a98853138" name="Changes" comment="" />
-      <created>1647637478798</created>
+      <changelist id="37f5373e-be4b-41e6-b482-237e511a8558" name="Changes" comment="" />
+      <created>1647828233068</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1647637478798</updated>
+      <updated>1647828233068</updated>
     </task>
     <servers />
   </component>
