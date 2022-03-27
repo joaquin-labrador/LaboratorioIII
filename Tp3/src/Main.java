@@ -7,6 +7,7 @@ import UserBank.*;
 import UserBank.BankAccount.BankAccount;
 
 import java.util.Scanner;
+
 public class Main {
 
 
@@ -19,13 +20,13 @@ public class Main {
         exercise3();
 
 
-
     }
-    public static void exercise1(){
+
+    public static void exercise1() {
         Scanner sc = new Scanner(System.in);
         Book book = new Book("Effective Java", 450, 150);
         char s = 's';
-        do{
+        do {
             System.out.println("Enter the name of the author");
             String name = sc.nextLine();
             System.out.println("Enter the lastname of the author");
@@ -34,72 +35,67 @@ public class Main {
             do {
                 System.out.println("Enter the sex of the author(f | m | x)");
                 sex = sc.nextLine().charAt(0);
-            }while(sex != 'f' && sex != 'm' && sex != 'x');
-            Author author = new Author(name,lastName,sex);//Creo el autor
+            } while (sex != 'f' && sex != 'm' && sex != 'x');
+            Author author = new Author(name, lastName, sex);//Creo el autor
             book.setAutores(author);//Asigno el autor al libro
             System.out.println("More authors?");
             s = sc.nextLine().charAt(0);
-        }while(s == 's');
+        } while (s == 's');
 
         //System.out.println(book);
         System.out.println(book.forSell());
 
 
-
     }
 
-    public static void exercise2(){
+    public static void exercise2() {
         char s = 's';
         Scanner sc = new Scanner(System.in);
-        Client client1 = new Client("Joaquin","JoaquinLabrador@gmial.com",50);
+        Client client1 = new Client("Joaquin", "JoaquinLabrador@gmial.com", 50);
         //Creo los productos que se van a cobrar
         Invoice invoice = new Invoice(client1);
 
-        do{
+        do {
             System.out.println("Enter price\n");
             int price = sc.nextInt();
             sc.nextLine();
             System.out.println("Product name\n");
             String name = sc.nextLine();
-            Item product = new Item(price,name);
+            Item product = new Item(price, name);
             invoice.setItems(product);
             System.out.println("Continue?\n");
             s = sc.next().charAt(0);
-        }while (s == 's');
+        } while (s == 's');
 
 //        products[0] = new Item(256,"Meat","Pig Meat",3);
 //        products[1] = new Item(206,"Fruit","Kiwi",110);
 //        products[2] = new Item(139,"Bread","Potato bread",82);
-       //Creo la factura depues de asignar los productos
+        //Creo la factura depues de asignar los productos
         System.out.println(invoice);
     }
 
     public static void exercise3() {
         Scanner sc = new Scanner(System.in);
-        UserBank client = new UserBank("joa.89" , 'm');
-        BankAccount bankAccount1 = new BankAccount(10000,client);
+        UserBank client = new UserBank("joa.89", 'm');
+        BankAccount bankAccount1 = new BankAccount(10000, client);
         bankOperations(bankAccount1);
         System.out.println(bankAccount1);
 
-
-
-
-
-
-
     }
-    public static void bankMenu(UserBank menuClient){
+
+    public static void bankMenu(UserBank menuClient) {
         System.out.println("----Welcome------ " + menuClient.getUserName());
-        System.out.println("1 Deposit money") ;
+        System.out.println("1 Deposit money");
         System.out.println("2 Retire money");
         System.out.println("3 Exit");
         System.out.println("Select an option");
     }
+
     public static void bankOperations(BankAccount account) {
         int op;
         Scanner sc = new Scanner(System.in);
         double money;
-        do{
+        do {
             bankMenu(account.getClient());
             op = sc.nextInt();
             switch (op) {
@@ -114,10 +110,11 @@ public class Main {
                     money *= (-1);// Multiplico por -1 para tranformar el numero a negativo
                     account.setBalance(money);
                 }
+
                 case 3 -> System.out.println("Thanks, See U later");
             }
 
-        }while(op >= 1 && op < 3);
+        } while (op >= 1 && op < 3);
     }
 
 
