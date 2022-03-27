@@ -27,8 +27,7 @@ public class BankAccount {
         if (money >= 0)
             this.balance += money;
         else {
-            money *= (-1);//Transformo el numero pasado como negativo devuelta a negativo
-            double verification = this.balance - money; // Verifico para el saldo deudor de -2000
+            double verification = this.balance + money; // Verifico para el saldo deudor de -2000
             if (verification > MAX_DEBT) {
                 this.balance = verification;
             } else {
