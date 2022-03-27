@@ -23,7 +23,7 @@ public class BankAccount {
         if(money >= 0)
             this.balance += money;
         else{
-            money *= (-1);
+            money *= (-1);//Transformo el numero pasado como negativo devuelta a negativo
             if(money > this.balance){
                 System.out.println("insufficient balance");
             }

@@ -3,15 +3,20 @@ import Book.author.Author;
 import Cliente.Client;
 import Cliente.invoice.Item.Item;
 import Cliente.invoice.Invoice;
+import UserBank.*;
+import UserBank.BankAccount.BankAccount;
+
 import java.util.Scanner;
 public class Main {
 
 
     public static void main(String[] args) {
         System.out.println("-_-_-_-Welcome to TP3-_-_-_-");
-        exercise1();
+        //exercise1();
 
         //exercise2();
+
+        exercise3();
 
 
 
@@ -68,4 +73,52 @@ public class Main {
        //Creo la factura depues de asignar los productos
         System.out.println(invoice);
     }
+
+    public static void exercise3() {
+        Scanner sc = new Scanner(System.in);
+        UserBank client = new UserBank("joa.89" , 'm');
+        BankAccount bankAccount1 = new BankAccount(10000,client);
+        bankOperations(bankAccount1);
+        System.out.println(bankAccount1);
+
+
+
+
+
+
+
+    }
+    public static void bankMenu(UserBank menuClient){
+        System.out.println("----Welcome------ " + menuClient.getUserName());
+        System.out.println("1 Deposit money") ;
+        System.out.println("2 Retire money");
+        System.out.println("3 Exit");
+        System.out.println("Select an option");
+    }
+    public static void bankOperations(BankAccount account) {
+        int op;
+        Scanner sc = new Scanner(System.in);
+        double money;
+        do{
+            bankMenu(account.getClient());
+            op = sc.nextInt();
+            switch (op) {
+                case 1 -> {
+                    System.out.println("Enter a money to deposit");
+                    money = sc.nextDouble();
+                    account.setBalance(money);
+                }
+                case 2 -> {
+                    System.out.println("Enter a money to retire");
+                    money = sc.nextDouble();
+                    money *= (-1);// Multiplico por -1 para tranformar el numero a negativo
+                    account.setBalance(money);
+                }
+                case 3 -> System.out.println("Thanks, See U later");
+            }
+
+        }while(op >= 1 && op < 3);
+    }
+
+
 }
