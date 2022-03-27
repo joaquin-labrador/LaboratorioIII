@@ -1,5 +1,7 @@
 package UserBank;
+
 import java.util.UUID;
+
 public class UserBank {
     private UUID idUser;
     private String userName;
@@ -8,7 +10,7 @@ public class UserBank {
     public UserBank() {
     }
 
-    public UserBank( String userName, char gender) {
+    public UserBank(String userName, char gender) {
         this.idUser = UUID.randomUUID();
         this.userName = userName;
         this.gender = gender;

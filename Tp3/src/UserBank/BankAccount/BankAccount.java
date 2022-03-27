@@ -1,10 +1,14 @@
 package UserBank.BankAccount;
+
 import java.util.UUID;
+
 import UserBank.UserBank;
+
 public class BankAccount {
     private UUID accountID;
     private double balance;
     private UserBank client;
+    static double MAX_DEBT = -2000;
 
     public BankAccount() {
     }
@@ -20,15 +24,15 @@ public class BankAccount {
     }
 
     public void setBalance(double money) {
-        if(money >= 0)
+        if (money >= 0)
             this.balance += money;
-        else{
+        else {
             money *= (-1);//Transformo el numero pasado como negativo devuelta a negativo
-            if(money > this.balance){
-                System.out.println("insufficient balance");
-            }
-            else{
-                this.balance -= money;
+            double verification = this.balance - money; // Verifico para el saldo deudor de -2000
+            if (verification > MAX_DEBT) {
+                this.balance = verification;
+            } else {
+                System.out.println("-----Insufficient balance-----");
             }
 
         }
