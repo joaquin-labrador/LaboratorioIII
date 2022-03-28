@@ -1,5 +1,6 @@
 /*
-LABRIX 2022
+LABRIX 2022.
+03/27
  */
 
 package Book;
@@ -12,7 +13,7 @@ public class Book {
     private String title;
     private double price;
     private int stock;
-    private ArrayList<Author> authors = new ArrayList<Author>();
+    private ArrayList<Author> authors = new ArrayList<Author>();//Arreglos dinamicos
 
     public Book() {
     }
