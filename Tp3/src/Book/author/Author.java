@@ -1,5 +1,8 @@
-package Book.author;
+/*
+LABRIX 2022
+ */
 
+package Book.author;
 
 public class Author {
     protected String name;
@@ -32,10 +35,6 @@ public class Author {
 
     @Override
     public String toString() {
-        return " Autor { " +
-                " name= '" + name + '\'' +
-                ", lastName= '" + lastName + '\'' +
-                ", Sex= " + Sex + "\n" +
-                '}';
+        return " Autor { " + " name= '" + name + '\'' + ", lastName= '" + lastName + '\'' + ", Sex= " + Sex + "\n" + '}';
     }
 }
