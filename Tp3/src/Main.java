@@ -6,6 +6,7 @@ import Cliente.invoice.Invoice;
 import UserBank.*;
 import UserBank.BankAccount.BankAccount;
 
+import java.net.PortUnreachableException;
 import java.util.Scanner;
 
 public class Main {
@@ -84,16 +85,17 @@ public class Main {
     }
 
     public static void bankMenu(UserBank menuClient) {
-        System.out.println("----Welcome------ " + menuClient.getUserName());
         System.out.println("1 Deposit money");
         System.out.println("2 Retire money");
-        System.out.println("3 Exit");
+        System.out.println("3 Bank history");
+        System.out.println("4 Exit");
         System.out.println("Select an option");
     }
 
     public static void bankOperations(BankAccount account) {
         int op;
         Scanner sc = new Scanner(System.in);
+        System.out.println("----Welcome------");
         double money;
         do {
             bankMenu(account.getClient());
@@ -110,12 +112,21 @@ public class Main {
                     money *= (-1);// Multiplico por -1 para tranformar el numero a negativo
                     account.setBalance(money);
                 }
+                case 3 -> {
+                    //System.out.println("Last 10 operations");
+                    viewHistory(account.getClient());
 
-                case 3 -> System.out.println("Thanks, See U later");
+                }
+                case 4 -> System.out.println("Thanks, See U later");
             }
 
-        } while (op >= 1 && op < 3);
+        } while (op >= 1 && op < 4);
     }
 
+    public static void viewHistory(UserBank history) {
+        for (int i = 0; i < history.getBankingHistory().size() && i < 10; i++) {
+            System.out.println(history.getBankingHistory().get(i));
+        }
+    }
 
 }
