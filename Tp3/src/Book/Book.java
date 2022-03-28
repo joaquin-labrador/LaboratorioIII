@@ -1,3 +1,7 @@
+/*
+LABRIX 2022
+ */
+
 package Book;
 
 import Book.author.Author;
@@ -59,12 +63,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", price=" + price +
-                ", stock=" + stock +
-                ", autores=" + authors.toString() +
-                '}';
+        return "Book{" + "title='" + title + '\'' + ", price=" + price + ", stock=" + stock + ", autores=" + authors.toString() + '}';
     }
 
     public String forSell() {
