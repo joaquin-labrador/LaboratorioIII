@@ -26,7 +26,7 @@ public class Main {
     public static void exercise1() {
         Scanner sc = new Scanner(System.in);
         Book book = new Book("Effective Java", 450, 150);
-        char s = 's';
+        char s;
         do {
             System.out.println("Enter the name of the author");
             String name = sc.nextLine();
@@ -50,7 +50,7 @@ public class Main {
     }
 
     public static void exercise2() {
-        char s = 's';
+        char s;
         Scanner sc = new Scanner(System.in);
         Client client1 = new Client("Joaquin", "JoaquinLabrador@gmial.com", 50);
         //Creo los productos que se van a cobrar
@@ -113,7 +113,7 @@ public class Main {
                     account.setBalance(money);
                 }
                 case 3 -> {
-                    //System.out.println("Last 10 operations");
+                    System.out.println("Last 10 operations");
                     viewHistory(account.getClient());
 
                 }
@@ -124,7 +124,15 @@ public class Main {
     }
 
     public static void viewHistory(UserBank history) {
-        for (int i = 0; i < history.getBankingHistory().size() && i < 10; i++) {
+        int i = 0;
+        if (history.getBankingHistory().size() > 10) {
+            //Si hay mas de 10 operaciones
+            i = history.getBankingHistory().size();
+            i -= 10;
+        }
+
+        for (; i < history.getBankingHistory().size(); i++) {
+
             System.out.println(history.getBankingHistory().get(i));
         }
     }
